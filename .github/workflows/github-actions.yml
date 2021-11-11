@@ -19,4 +19,4 @@ jobs:
         run: |
           curl -X POST https://gm4gi7dzoh.execute-api.ap-northeast-2.amazonaws.com/dev \
           -H 'Accept: application/json \
-          -d '{"env": "dev"}'
+          -d '{"client_payload": {"env": "dev"}}'
