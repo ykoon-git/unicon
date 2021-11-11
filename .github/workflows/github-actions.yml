@@ -15,3 +15,9 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - name: Send Trigger
+        run: |
+          curl -X POST https://api.github.com/repos/:owner/:repo/dispatches \
+          -H 'Accept: application/vnd.github.v3+json' \
+          -u ${{ secrets.ACCESS_TOKEN }} \
+          -d '{"event_type": "TRIGGER_API_TEST", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
