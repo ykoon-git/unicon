@@ -1,0 +1,3 @@
+Phrase  SoundsLike  IPA DisplayAs
+브레인튜머          뇌종양
+브레인캔서          퇴종양
